@@ -1,0 +1,108 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*::-webkit-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: rem(20px);
+	min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	font-family: 'Museo Cyrl 100', sans-serif;
+	color: #000;
+	background-color: #fff;
+	overflow-x: hidden; 
+}
+.container {
+	max-width: 1480px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.button {
+	font-size: rem(22px);
+	line-height: 1;
+	font-family: 'Museo Cyrl 300';
+	a,button {
+		@include btn;
+		display: inline-block;
+		vertical-align: top;
+		padding: rem(18px) rem(26px);
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		background-image: url(../img/button-green.png);
+		background-size: 100% 100%;
+		text-shadow: 0 1px 1px transparentize(#555, .6);
+		transition: all .5s ease;
+		&:hover, &:active, &:focus {
+			filter: saturate(2) brightness(1);
+			text-shadow: 0 -1px 1px transparentize(#555, .6);
+        }
+	}
+}
+
+.button_yellow {
+	a, button {
+		text-transform: none;
+		background-image: url(../img/button-yellow.png);
+	}
+}
+
+//Custom Styles Here
+@import "components/header.scss";
+@import "components/details.scss";
+@import "components/reviews.scss";
+@import "components/payment.scss";
+@import "components/questions.scss";
+@import "components/footer.scss";
+
+@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+//@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+@import "html/libs/magnific-popup/dist/magnific-popup";

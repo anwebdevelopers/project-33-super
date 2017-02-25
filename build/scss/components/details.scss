@@ -1,0 +1,215 @@
+.details {
+    padding: rem(70px) 0;
+}
+.details__wrapper {
+    @extend .container;
+}
+.details__title {
+    text-align: center;
+    color: $green;
+    font-family: 'Museo Cyrl 300';
+    h2 {
+        margin: 0;
+        font-size: rem(40px);
+        line-height: 1;
+    }
+}
+.details__box {
+    @extend .clearfix;
+    margin: rem(50px) 0 0 0;
+}
+.details__galery {
+    float: left;
+    width: 45%;
+}
+
+.details__galery-bigphoto {
+    position: relative;
+    height: 0;
+    padding-bottom: 70%;
+    background-color: $green;
+    border-radius: 20px;
+    border: inset 3px dashed #fff;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 2%;
+        bottom: 2%;
+        left: 2%;
+        right: 2%;
+        border: rem(3px) dashed #b2e572;
+        border-radius: 20px;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 100%;
+        max-height: 90%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+}
+.details__galery-box {
+    margin: 10px 0 0 0;
+    font-size: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.details__galery-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 5% 0 0;
+    padding: rem(10px) 4%;
+    border: rem(4px) solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s ease;
+    background-image: url(../img/bg-gray.png);
+    cursor: pointer;
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: all .5s ease;
+    }
+    &:hover, &:active, &:focus {
+        border-color: $green;
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+}
+.active {
+    border-color: $green;
+}
+.details__galery-item:nth-child(3) {
+    margin: 0;
+}
+
+.details__description {
+    margin: 0 0 0 50%;
+}
+.details__description-title {
+    font-family: 'Museo Cyrl 300';
+    h3 {
+        margin: 0;
+        font-size: rem(20px);
+        line-height: 1.2;
+        font-weight: 300;
+    }
+}
+.details__description-deliv {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(20px);
+    line-height: 1.2;
+    font-family: 'Museo Cyrl 300';
+    color: #f34f69;
+    span {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 60px 0 0;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/sprites.png);
+            background-position: 0 -447px ;
+        	width: 40px;
+        	height: 28px;
+        }
+    }
+}
+.details__description-text {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(20px);
+    line-height: 1.2;
+    p {
+        margin: rem(20px) 0;
+    }
+}
+.details__functions {
+    margin: rem(30px) 0 0 0;
+}
+.details__functions-title {
+    font-size: rem(20px);
+    line-height: 1.2;
+    color: $green;
+    font-family: 'Museo Cyrl 300';
+}
+.details__functions-list {
+    margin: rem(25px) 0 0 0;
+    font-size: rem(20px);
+    line-height: 1.2;
+    ul {
+        margin: 0;
+        padding: 0 0 0 rem(35px);
+        list-style: none;
+        li {
+            position: relative;
+            margin: 6px 0 0 0;
+            &:before {
+                content: '';
+                position: absolute;
+                top: rem(9px);
+                left: rem(-20px);
+                background-color: $green;
+                width: rem(6px);
+                height: rem(6px);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.details__button {
+    margin: rem(50px) 0 0 0;
+}
+@media only screen and (max-width : 1480px) {
+    .details__galery {
+        width: 55%;
+    }
+    .details__description {
+        margin: 0 0 0 60%;
+    }
+}
+@media only screen and (max-width : 1200px) {
+    .details__galery {
+        width: 55%;
+    }
+    .details__description {
+        margin: 0 0 0 58%;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .details__galery {
+        float: none;
+        width: auto;
+    }
+    .details__description {
+        margin: rem(50px) 0 0 0;
+    }
+    .details__button {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .details__galery-item {
+        width: 32%;
+        margin: 0 1.55% 0 0;
+    }
+}

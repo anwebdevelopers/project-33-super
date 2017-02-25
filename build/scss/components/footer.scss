@@ -1,0 +1,141 @@
+.footer {
+    padding: rem(70px) 0 rem(50px) 0;
+}
+.footer__wrapper {
+    @extend .container;
+    @extend .clearfix;
+}
+.footer__logo {
+    float: left;
+    max-width: 290px;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    span {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #aaa;
+        font-family: 'Museo Cyrl 300';
+    }
+}
+.footer__request {
+    margin: 0 0 0 150px;
+    float: left;
+    max-width: 280px;
+    text-align: center;
+}
+.footer__request-title {
+    font-size: rem(20px);
+    font-family: 'Museo Cyrl 300';
+    font-weight: 600;
+}
+.footer__request-button {
+    margin: 5px 0 0 0;
+}
+.footer__contacts {
+    margin: 0 0 0 200px;
+    float: left;
+    max-width: 170px;
+}
+.footer__contacts-title {
+    font-size: rem(20px);
+    font-family: 'Museo Cyrl 300';
+    font-weight: 600;
+}
+.footer__contacts-item {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(16px);
+    font-family: 'Museo Cyrl 300';
+    a, span {
+        display: block;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+}
+.footer__adress {
+    float: right;
+    max-width: 270px;
+}
+.footer__adress-title {
+    font-size: rem(20px);
+    font-family: 'Museo Cyrl 300';
+    font-weight: 600;
+}
+.footer__adress-item {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(16px);
+    font-family: 'Museo Cyrl 300';
+    a {
+        color: $blue;
+        text-decoration: none;
+        border-bottom: 2px dashed #2599eb;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $orange;
+            border-color: $orange;
+        }
+    }
+}
+@media only screen and (max-width : 1480px) {
+    .footer__request {
+        margin: 0 0 0 60px;
+    }
+    .footer__contacts {
+        margin: 0 0 0 70px;
+    }
+}
+
+.callback__popup,
+.request__popup {
+    max-width: 380px;
+    margin: 0 auto;
+    background-image: url(../img/bg-form.png);
+    background-size: 100% 100%;
+}
+
+@media only screen and (max-width : 1200px) {
+    .footer__wrapper {
+        text-align: center;
+    }
+    .footer__logo,
+    .footer__request,
+    .footer__contacts,
+    .footer__adress {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin: rem(30px) rem(20px) 0 rem(20px);
+    }
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .footer__logo,
+    .footer__request,
+    .footer__contacts,
+    .footer__adress {
+        display: block;
+        margin: rem(30px) auto 0 auto;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
+}

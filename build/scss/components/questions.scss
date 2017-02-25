@@ -1,0 +1,194 @@
+.questions {
+    position: relative;
+    padding: rem(70px) 0;
+    background-image: url(../img/bg-blue.png);
+    background-size: auto 100%;
+    background-position: center 0;
+    background-repeat: repeat-x;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 460px;
+        height: 469px;
+        background-image: url(../img/children.png);
+        background-size: 100% 100%;
+    }
+}
+.questions__wrapper {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+}
+.questions__title {
+    text-align: center;
+    color: $blue;
+    font-family: 'Museo Cyrl 300';
+    h2 {
+        margin: 0;
+        font-size: rem(40px);
+        line-height: 1;
+    }
+}
+.questions__undertitle {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(20px);
+    line-height: 1.2;
+    text-align: center;
+    color: $blue;
+    font-family: 'Museo Cyrl 300';
+}
+.questions__box {
+    @extend .clearfix;
+    margin: rem(50px) 15% 0 15%;
+}
+.questions__form {
+}
+.questions__form-box {
+    @extend .clearfix;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    padding: 65px 8% 65px 8%;
+    background-image: url(../img/bg-form-big.png);
+    background-size: 100% 100%;
+}
+
+.questions__form-item {
+    position: relative;
+    clear: left;
+    float: left;
+    width: 42%;
+    display: block;
+    margin: 0 0 20px 0;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../img/sprites.png);
+        background-repeat: no-repeat;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px 0 70px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        outline: none;
+        box-shadow: none;
+        transition: all .5s ease;
+        font-family: 'Museo Cyrl 300';
+        &:hover, &:active, &:focus {
+            border-color: $green;
+        }
+    }
+}
+.questions__form-item_name {
+    &:before {
+        background-position: 0 -69px ;
+    	width: 29px;
+    	height: 31px;
+    }
+}
+.questions__form-item_phone {
+    &:before {
+        background-position: 0 -31px ;
+    	width: 25px;
+    	height: 29px;
+    }
+}
+.questions__form-item_theme {
+    &:before {
+        background-position: 0 -108px ;
+    	width: 29px;
+    	height: 22px;
+    }
+}
+.questions__form-textarea {
+    display: block;
+    margin: 0 0 0 47%;
+    textarea {
+        display: block;
+        width: 100%;
+        height: 190px;
+        line-height: 50px;
+        padding: 0 20px 0 20px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        box-shadow: none;
+        transition: all .5s ease;
+        font-family: 'Museo Cyrl 300';
+        resize: vertical;
+        &:hover, &:active, &:focus {
+            border-color: $green;
+        }
+    }
+}
+.questions__form-submit {
+    margin: rem(50px) 0 0 0;
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width : 1920px) {
+    .questions {
+        &:before {
+            top: -160px;
+            width: 657px;
+            height: 669px;
+        }
+    }
+}
+@media only screen and (max-width : 1480px) {
+    .questions {
+        &:before {
+            top: 60px;
+            width: 329px;
+            height: 335px;
+        }
+    }
+}
+@media only screen and (max-width : 1200px) {
+    .questions {
+        &:before {
+            display: none;
+        }
+    }
+    .questions__box {
+        margin: rem(50px) 8% 0;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .questions__box {
+        margin: rem(50px) 0 0;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .questions__form-item {
+        float: none;
+        width: auto;
+    }
+    .questions__form-textarea {
+        margin: 20px 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .questions__form-box {
+        background-image: url(../img/bg-form.png);
+    }
+}

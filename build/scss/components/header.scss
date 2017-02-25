@@ -1,0 +1,552 @@
+.header {
+    padding: 0 0 rem(70px) 0;
+    background-image: url(../img/bg-gray.png);
+    background-position: center 100%;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+}
+.header__wrapper {
+    @extend .container;
+}
+.header__top-line {
+    @extend .clearfix;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0 160px 0;
+    background-image: url(../img/bg-header-top.png);
+    background-position: center 100%;
+    background-size: cover;
+    background-repeat: repeat-x;
+    text-align: center;
+}
+.header__logo {
+    float: left;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.header__phone {
+    float: right;
+}
+.header__phone-link {
+    font-family: 'Museo Cyrl 300';
+    font-size: rem(22px);
+    a {
+        position: relative;
+        display: block;
+        padding: 0 0 0 32px;
+        text-decoration: none;
+        color: #000;
+        transition: all .5s ease;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/sprites.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        	width: 22px;
+        	height: 25px;
+        }
+        &:hover, &:active, &:focus {
+            color: $orange;
+        }
+    }
+}
+.header__phone-button {
+    margin: 5px 0 0 0;
+    text-transform: none;
+    a {
+        display: block;
+        padding: rem(14px) rem(20px);
+    }
+}
+.header__nav {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0 0 0;
+    font-family: 'Museo Cyrl 300';
+    ul {
+        margin: 0;
+        padding: 0;
+        letter-spacing: normal;
+        font-size: 0;
+        li {
+            display: inline-block;
+            vertical-align: top;
+            a {
+                display: block;
+                padding: 5px rem(15px);
+                font-size: rem(20px);
+                line-height: 1;
+                border-radius: 30px;
+                border: 1px solid transparent;
+                transition: all .5s ease;
+                text-decoration: none;
+                color: #000;
+                &:hover, &:active, &:focus {
+                    border: 1px solid $orange;
+                }
+            }
+            .mPS2id-highlight {
+                border: 1px solid $orange;
+            }
+        }
+    }
+
+}
+
+.header__content {
+    margin: -50px 0 0 0;
+}
+
+.header__title {
+    font-family: 'Museo Cyrl 300';
+    color: #4100a3;
+    text-align: center;
+    h1 {
+        margin: 0;
+        font-size: rem(40px);
+        line-height: 1.2;
+    }
+}
+.header__undertitle {
+    margin: 20px 0 0 0;
+    font-size: rem(25px);
+    line-height: 1.2;
+    text-align: center;
+    font-family: 'Museo Cyrl 300';
+    span {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px 100px 15px 100px;
+        background-image: url(../img/bg-text-long.png);
+        background-size: 100% 100%;
+    }
+}
+.header__box {
+    @extend .clearfix;
+    margin: 55px 110px 0 110px;
+}
+.header__video {
+    float: left;
+    width: 60%;
+}
+.header__video-link {
+    position: relative;
+    display: block;
+    border-top: 12px solid $orange;
+    border-bottom: 12px solid $orange;
+    border-left: 17px solid $orange;
+    border-right: 17px solid $orange;
+    border-radius: 64px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease;
+    &:hover, &:active, &:focus {
+        border-color: $green;
+        color: $green;
+        .header__video-text {
+            span {
+                &:before {
+                    border-left-color: $green;
+                }
+                &:after {
+                    border-color: $green;
+                }
+            }
+        }
+    }
+}
+.header__video-img {
+    transition: all .5s ease;
+    img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+.header__video-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    font-size: rem(20px);
+    text-align: center;
+    font-family: 'Museo Cyrl 300';
+    span {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0 0 140px;
+        text-decoration: underline;
+        text-align: left;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 36px;
+            transform: translateY(-50%);
+            border: 18px solid transparent;
+            border-left: 30px solid #fff;
+            border-radius: 10px;
+            transition: all .5s ease;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            transform: translateY(-50%);
+            border: 3px dashed #fff;
+            border-radius: 50%;
+            transition: all .5s ease;
+        }
+    }
+}
+.header__request {
+    position: relative;
+    top: -40px;
+    margin: 0 0 0 70%;
+    background-image: url(../img/bg-form.png);
+    background-size: 100% 100%;
+}
+.header__request-form {
+    padding: 65px 12% 65px 12%;
+}
+.header__request-title {
+    margin: 0 0 30px 0;
+    text-align: center;
+    color: #fff;
+    font-size: rem(25px);
+    line-height: 1.2;
+    text-shadow: 0 1px 1px transparentize(#555, .6);
+    font-family: 'Museo Cyrl 300';
+}
+.header__request-item {
+    position: relative;
+    display: block;
+    margin: 15px 0 0 0;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../img/sprites.png);
+        background-repeat: no-repeat;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px 0 70px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 50px;
+        outline: none;
+        box-shadow: none;
+        transition: all .5s ease;
+        font-family: 'Museo Cyrl 300';
+        &:hover, &:active, &:focus {
+            border-color: $green;
+        }
+    }
+}
+.header__request-item_name {
+    &:before {
+        background-position: 0 -69px ;
+    	width: 29px;
+    	height: 31px;
+    }
+}
+.header__request-item_phone {
+    &:before {
+        background-position: 0 -31px ;
+    	width: 25px;
+    	height: 29px;
+    }
+}
+.header__request-submit {
+    margin: 35px 0 0 0;
+    button {
+        display: block;
+        width: 100%;
+    }
+}
+.header__advantages {
+    margin: 20px 0 0 0;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header__advantages-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    padding: 0 .5%;
+    text-align: center;
+
+    &:hover, &:active, &:focus {
+        .header__advantages-icon {
+            transform: scale(1.1);
+            background-color: $green;
+        }
+        .header__advantages-text {
+            filter: saturate(2) brightness(1);
+        }
+    }
+}
+.header__advantages-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all .5s ease;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(../img/sprites.png);
+        background-repeat: no-repeat;
+    }
+}
+.header__advantages-icon_1 {
+    i {
+        background-position: 0 -139px ;
+    	width: 42px;
+    	height: 60px;
+    }
+}
+.header__advantages-icon_2 {
+    i {
+        background-position: 0 -207px ;
+    	width: 60px;
+    	height: 48px;
+    }
+}
+.header__advantages-icon_3 {
+    i {
+        background-position: 0 -265px ;
+    	width: 60px;
+    	height: 46px;
+    }
+}
+.header__advantages-icon_4 {
+    i {
+        background-position: 0 -323px ;
+    	width: 60px;
+    	height: 42px;
+    }
+}
+.header__advantages-icon_5 {
+    i {
+        background-position: 0 -375px ;
+    	width: 46px;
+    	height: 60px;
+    }
+}
+.header__advantages-text {
+    margin: 20px 0 0 0;
+    padding: 6px 30px;
+    font-size: rem(20px);
+    font-family: 'Museo Cyrl 300';
+    background-image: url(../img/bg-text-short.png);
+    background-size: 100% 100%;
+    transition: all .5s ease;
+}
+@media only screen and (min-width : 1920px) {
+    .header__top-line {
+        background-size: 100% 100%;
+    }
+
+}
+@media only screen and (max-width : 1480px) {
+    html {
+        font-size: 14px;
+    }
+    .container {
+    	max-width: 1200px;
+    }
+
+    .header__logo  {
+        max-width: 240px;
+    }
+    .header__box {
+        margin: 55px 0 0;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .container {
+    	max-width: 992px;
+    }
+    .header__top-line {
+        text-align: left;
+    }
+    .header__logo  {
+        max-width: 100%;
+    }
+    .header__nav {
+        text-align: center;
+    }
+    .header__request {
+        margin: 0 0 0 62%;
+    }
+    .header__advantages-text {
+        padding: 6px 20px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .container {
+    	max-width: 768px;
+    }
+
+    .header__logo  {
+        margin: 15px 0 0 0;
+    }
+    .header__top-line {
+        padding: 20px 0;
+        text-align: center;
+        background-image: none;
+        background-color: transparentize(#fff, .5);
+    }
+    .header__nav {
+        clear: both;
+        display: block;
+        padding: 15px 0 0 0;
+    }
+    .header__content {
+        margin: 40px 0 0;
+    }
+    .header__title {
+        br {
+            display: none;
+        }
+    }
+    .header__undertitle span {
+        padding: 10px 60px 15px;
+    }
+    .header__video {
+        float: none;
+        width: auto;
+    }
+    .header__request {
+        position: static;;
+        top: auto;
+        background-image: url(../img/bg-form-big.png);
+        margin: 40px auto 0 auto;
+    }
+    .header__request-submit {
+        text-align: center;
+        button {
+            display: inline-block;
+            width: auto;
+        }
+    }
+    .header__advantages {
+        margin: 60px 0 0 0;
+    }
+    .header__advantages-item {
+        width: 33.3%;
+        margin: 0 0 30px 0;
+    }
+}
+@media only screen and (max-width : 768px) {
+    html {
+        font-size: 12px;
+    }
+
+
+    .header__nav {
+        margin: 0;
+        ul {
+            li {
+                a {
+                    font-size: rem(22px);
+                }
+            }
+        }
+    }
+    .header__undertitle span {
+        padding: 10px 40px 15px;
+    }
+}
+@media only screen and (max-width : 640px) {
+    .header__logo {
+        float: none;
+        text-align: center;
+        margin: 0;
+    }
+    .header__phone {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px 0 0 0;
+    }
+    .header__phone-button {
+        margin: 15px 0 0;
+    }
+    .header__undertitle span {
+        padding: 10px 30px 15px;
+    }
+    .header__advantages-item {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width : 480px) {
+    .header__title {
+        h1 {
+            font-size: rem(36px);
+        }
+    }
+    .header__undertitle span {
+        padding: 10px 20px 15px;
+    }
+    .header__box {
+        margin: 40px 0 0;
+    }
+    .header__video-link {
+        border-top: 5px solid #ffc438;
+        border-bottom: 5px solid #ffc438;
+        border-left: 8px solid #ffc438;
+        border-right: 8px solid #ffc438;
+        border-radius: 36px;
+    }
+    .header__video-text {
+        span {
+            padding: 0;
+            text-align: center;
+            &:before, &:after {
+                display: none;
+            }
+        }
+    }
+    .header__request-form {
+        padding: 65px 8%;
+    }
+    .header__request {
+        background-image: url(../img/bg-form.png);
+    }
+    .header__advantages-text {
+        padding: 6px;
+    }
+
+}

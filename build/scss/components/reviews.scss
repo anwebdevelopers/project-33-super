@@ -1,0 +1,175 @@
+.reviews {
+    padding: rem(70px) 0;
+    background-image: url(../img/bg-yellow.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+}
+.reviews__wrapper {
+    @extend .container;
+}
+.reviews__title {
+    text-align: center;
+    color: $orange;
+    font-family: 'Museo Cyrl 300';
+    h2 {
+        margin: 0;
+        font-size: rem(40px);
+        line-height: 1;
+    }
+}
+.reviews__box {
+    @extend .clearfix;
+    margin: rem(50px) 15% 0 15%;
+}
+.reviews__slider {
+    padding: rem(15px);
+    border: rem(5px) dashed $orange;
+    border-radius: 40px;
+}
+.reviews__slider.owl-carousel {
+    position: relative;
+    .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 0;
+            margin-top: -38px;
+            display: inline-block;
+            vertical-align: top;
+            width: 39px;
+        	height: 77px;
+            background-image: url(../img/sprites.png);
+            background-repeat: no-repeat;
+            transition: all .5s ease;
+            &:hover, &:focus {
+                transform: scaleY(1.2);
+            }
+        }
+        .owl-prev {
+            left: -10%;
+            background-position: 0 -549px ;
+        }
+        .owl-next {
+            right: -10%;
+            background-position: 0 -633px ;
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: rem(-55px);
+        text-align: center;
+        .owl-dot {
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(15px);
+            height: rem(15px);
+            margin: 0 rem(12px);
+            background-color: $orange;
+            border-radius: 50%;
+            transition: all .5s ease;
+        }
+        .owl-dot.active {
+            background-color: #fff;
+            box-shadow: 0 0 0 5px $orange;
+        }
+    }
+}
+.reviews__slider-item {
+    padding: 8%;
+    background-color: #fff;
+    border-radius: 40px;
+}
+.reviews__item-rating {
+
+}
+.reviews__rating-title {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    font-size: rem(20px);
+    color: $orange;
+    font-family: 'Museo Cyrl 300';
+}
+.reviews__rating-box {
+    display: inline-block;
+    vertical-align: middle;
+}
+.reviews__rating-item-yellow {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 rem(2px);
+    background-position: 0 -483px ;
+	width: 26px;
+	height: 26px;
+    background-image: url(../img/sprites.png);
+    background-repeat: no-repeat;
+}
+.reviews__rating-item-transparent {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 rem(2px);
+    background-position: 0 -516px ;
+	width: 26px;
+	height: 26px;
+    background-image: url(../img/sprites.png);
+    background-repeat: no-repeat;
+}
+.reviews__item-text {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(22px);
+    line-height: 1.2;
+    p {
+        margin: rem(20px) 0;
+    }
+}
+.reviews__item-name {
+    margin: rem(40px) 0 0 0;
+    font-size: rem(16px);
+    line-height: 1.2;
+    font-family: 'Museo Cyrl 300';
+}
+.reviews__item-date {
+    margin: rem(20px) 0 0 0;
+    font-size: rem(16px);
+    line-height: 1.2;
+    font-family: 'Museo Cyrl 300';
+}
+.reviews__button {
+    margin: rem(100px) 0 0 0;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+    .reviews__box {
+        margin: 3.125rem 8% 0;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+@media only screen and (max-width : 640px) {
+    .reviews__box {
+        margin: 3.125rem 0 0;
+    }
+    .reviews__slider.owl-carousel {
+        .owl-nav {
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width : 480px) {
+
+}
